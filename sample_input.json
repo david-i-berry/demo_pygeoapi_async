@@ -1,0 +1,71 @@
+{
+  "mode": "async",
+  "inputs": {
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [
+        -104.6666666667,
+        39.8666666667
+      ]
+    },
+    "properties": {
+      "metadata": {
+        "data_identification": {
+          "originating_centre": 8,
+          "originating_subcentre": 0
+        },
+        "station_identification": {
+          "wigos_identifier": "0-20000-0-72565"
+        },
+        "station_location": {
+          "station_height_above_sea_level": 1656,
+          "thermometer_height_above_local_ground": 2.0,
+          "latitude": 39.8666666667,
+          "longitude": -104.6666666667
+        },
+        "observing_practices": {
+          "minimum_temperature_day_offset": 0,
+          "maximum_temperature_day_offset": 0,
+          "mean_temperature_day_offset": 0,
+          "total_precipitation_day_offset": 0,
+          "total_snow_depth_day_offset": 0,
+          "fresh_snow_depth_day_offset": 0,
+          "minimum_temperature_start_time": "07:00:01",
+          "maximum_temperature_start_time": "07:00:01",
+          "mean_temperature_start_time": "00:00:01",
+          "total_precipitation_start_time": "07:00:01",
+          "total_snow_depth_start_time": "12:00:00",
+          "fresh_snow_depth_start_time": "07:00:01",
+          "method_of_calculating_mean_temperature": 2
+        },
+        "measurement_quality": {
+          "thermometer_siting_classification": null,
+          "thermometer_measurement_quality": null,
+          "rain_gauge_siting_classification": null,
+          "rain_gauge_measurement_quality": null
+        }
+      },
+      "data": [
+        {
+          "nominal_reporting_day": "2021-11-01",
+          "total_accumulated_precipitation_flag": 0,
+          "total_accumulated_precipitation": 0.0,
+          "fresh_snow_depth_flag": 0,
+          "fresh_snow_depth": 0.0,
+          "total_snow_depth_flag": 0,
+          "total_snow_depth": 0.0,
+          "minimum_temperature_flag": 0,
+          "minimum_temperature": 8.0,
+          "maximum_temperature_flag": 0,
+          "maximum_temperature": 0.0,
+          "mean_temperature_flag": 0,
+          "mean_temperature": 3.1
+        }
+      ]
+    }
+  },
+  "output": {
+    "messages": []
+  }
+}

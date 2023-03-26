@@ -1,0 +1,70 @@
+server:
+    bind:
+        host: 0.0.0.0
+        port: 5000
+    url: http://localhost:5000
+    mimetype: application/json; charset=UTF-8
+    encoding: utf-8
+    languages:
+        - en-US
+    limit: 500
+    map:
+        url: https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+        attribution: <a href="https://osm.org/copyright">OpenStreetMap</a> contributors
+    templates:
+        path: /pygeoapi/pygeoapi/templates
+    manager:
+        name: TinyDB
+        connection: /tmp/pygeoapi-process-manager.db
+        output_dir: /tmp/
+
+logging:
+    level: DEBUG
+    logfile: /tmp/pygeoapi.log
+
+metadata:
+    identification:
+        title:
+            en: DayCLI encoding
+        description:
+            en: |-
+                PygeoAPI instance to support the encoding of daily climate data
+        keywords:
+            en:
+                - wmo
+                - wis 2.0
+        keywords_type: theme
+        terms_of_service: https://public.wmo.int/en/our-mandate/what-we-do/observations/Unified-WMO-Data-Policy-Resolution
+        url: https://community.wmo.int/activity-areas/wis/wis2-implementation
+    license:
+        name: Unified WMO Data Policy
+        url: https://public.wmo.int/en/our-mandate/what-we-do/observations/Unified-WMO-Data-Policy-Resolution
+    provider:
+        name: Organization Name
+        url: https://wmo.int
+    contact:
+        name: Lastname, Firstname
+        position: Position Title
+        address: Mailing Address
+        city: City
+        stateorprovince: Administrative Area
+        postalcode: Zip or Postal Code
+        country: Country
+        phone: +xx-xxx-xxx-xxxx
+        fax: +xx-xxx-xxx-xxxx
+        email: you@example.org
+        url: https://example.org
+        hours: Mo-Fr 08:00-17:00
+        instructions: During hours of service. Off on weekends.
+        role: pointOfContact
+
+resources:
+  csv2bufr-transform:
+    type: process
+    processor:
+      name: csv2bufr.pygeoapi_plugin.csv2bufrProcessor
+  daycli-encoder:
+      type: process
+      processor:
+          name: csv2bufr.pygeoapi_daycli_plugin.daycliProcessor
+
